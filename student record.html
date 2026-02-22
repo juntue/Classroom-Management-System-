@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIST MANAGEMENT</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <div class="header">
+        <h1 class="logo">CLASS MANAGEMENT</h1>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search students..." class="header-search">
+            <div id="search-results" class="search-results"></div>
+        </div>
+        <button id="toggle-list">Student List</button>
+        <img src="icct.gif" alt="HSR Image" class="header-image">
+    </div>
+
+    <div class="container">
+        <div class="form-box active" id="login-form">
+            <form id="student-form">
+                <h2 id="form-title">CLASS LIST</h2>
+                
+                <label for="student-name">Student Name</label>
+                <input type="text" id="student-name" name="student-name" required placeholder="Enter student name">
+                
+                <label for="student-id">Student ID</label>
+                <input type="text" id="student-id" name="student-id" required placeholder="Enter student ID">
+                
+                <label for="student-course">Course</label>
+                <input type="text" id="student-course" name="student-course" required placeholder="Enter course">
+                
+                <label for="student-year">Year Level</label>
+                <input type="text" id="student-year" name="student-year" required placeholder="Enter year level">
+                
+                <label for="student-age">Age</label>
+                <input type="text" id="student-age" name="student-age" required placeholder="Enter age">
+                
+                <button type="submit" id="submit-btn">SUBMIT</button>
+                <button type="button" id="cancel-btn" style="display:none;">CANCEL</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="student-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>STUDENT LISTS</h2>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="class">
+                    <div id="list-section">
+                        <h2>PENDING STUDENTS (CLASS LIST)</h2>
+                        <table id="class-list-table">
+                            <thead>
+                                <tr>
+                                    <th>Student Name</th>
+                                    <th>Student ID</th>
+                                    <th>Course</th>
+                                    <th>Year Level</th>
+                                    <th>Age</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="student-list">
+                           
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div id="approved-section">
+                        <h2>APPROVED STUDENTS</h2>
+                        <table id="approved-table">
+                            <thead>
+                                <tr>
+                                    <th>Student Name</th>
+                                    <th>Student ID</th>
+                                    <th>Course</th>
+                                    <th>Year Level</th>
+                                    <th>Age</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="approved-list">
+                               
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; M002/joshue arenal</p>
+        <p><a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms of Service</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
